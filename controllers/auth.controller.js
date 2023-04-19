@@ -1,5 +1,3 @@
-// const bcrypt = require("bcrypt");
-// const jwt = require("jsonwebtoken");
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { supabase } from "../supabaseClient.js";
@@ -79,6 +77,7 @@ async function registerController(req, res) {
 
 async function fetchUsers(req, res) {
 	const { data: users, error } = await supabase.from("users").select("*");
+
 	if (error) {
 		return res
 			.status(500)

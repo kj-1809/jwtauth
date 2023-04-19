@@ -1,7 +1,3 @@
-// const express = require("express");
-// const jwt = require('jsonwebtoken')
-// const { fetchController } = require("../controllers/fetch.controller");
-
 import express from "express";
 import jwt from "jsonwebtoken";
 import { fetchController } from "../controllers/fetch.controller.js";
@@ -32,5 +28,4 @@ fetchRouter.use(isAuthenticated);
 
 fetchRouter.get("/data", fetchController);
 
-// module.exports = { fetchRouter };
 export { fetchRouter };
